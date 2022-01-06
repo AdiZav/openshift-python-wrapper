@@ -233,7 +233,7 @@ class NodeNetworkConfigurationPolicy(Resource):
                         command=["cat", f"/sys/class/net/{port}/mtu"]
                     ).strip()
                     LOGGER.info(
-                        f"Backup MTU: {pod.node.name} interface {port} MTU is {mtu}"
+                        f"Backup MTU: {pod.node.name} interface {port} MTU ANAT is {mtu}"
                     )
                     self.mtu_dict[port] = mtu
 
